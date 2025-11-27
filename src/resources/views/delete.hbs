@@ -1,0 +1,7 @@
+<form action='/user/deleteUser/{{showConfirm.Id}}?_method=DELETE' method='POST'>
+    <div class='mb-3 mt-3'>
+        <label for='email' class='form-label'>Are you sure to delete user with email</label>
+        <input type='none' class='form-control' id='email' value='{{showConfirm.email}}' name='email' readonly />
+    </div>
+    <button type='submit' class='btn btn-primary'>Delete</button>
+</form>

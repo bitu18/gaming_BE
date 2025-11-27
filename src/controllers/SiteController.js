@@ -1,8 +1,11 @@
+const { getAllUsers } = require('../services/CRUDservices');
+
 class SiteController {
     // [GET] /home
-    index(req, res) {
-        res.render('home');
-    }
+    home = async (req, res) => {
+        let results = await getAllUsers();
+        return res.render('home', { results });
+    };
 
     // [GET] /search
     search(req, res) {

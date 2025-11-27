@@ -16,8 +16,16 @@
     "license": "ISC",
     "description": "",
     "dependencies": {
+        "@sendgrid/mail": "^8.1.5",
+        "bcryptjs": "^3.0.2",
+        "cookie-parser": "^1.4.7",
+        "cors": "^2.8.5",
         "express": "^5.1.0",
-        "express-handlebars": "^8.0.1"
+        "express-handlebars": "^8.0.1",
+        "jsonwebtoken": "^9.0.2",
+        "method-override": "^3.0.0",
+        "mysql2": "^3.14.0",
+        "nodemailer": "^7.0.5"
     },
     "lint-staged": {
         "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
@@ -28,6 +36,7 @@
         }
     },
     "devDependencies": {
+        "dotenv": "^16.5.0",
         "husky": "^9.1.7",
         "lint-staged": "^15.5.1",
         "morgan": "^1.10.0",

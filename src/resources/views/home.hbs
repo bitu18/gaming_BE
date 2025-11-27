@@ -1,1 +1,29 @@
-<h1>Home Page</h1>
+<div class='container'>
+    <h2>User Data</h2>
+    <table class='table table-striped'>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each results}}
+                <tr>
+                    <th>{{sum @index 1}}</th>
+                    <td>{{firstName}}</td>
+                    <td>{{lastName}}</td>
+                    <td>{{email}}</td>
+                    <td>
+                        <a href='/user/editUser/id/{{this.Id}}'>Edit</a>
+                        <a href='/user/deleteUser/id/{{this.Id}}'>Delete</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

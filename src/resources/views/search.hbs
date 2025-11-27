@@ -1,11 +1,28 @@
-<form action='/action_page.php'>
+<form action='/user/create' method='POST'>
+    <h2>Add New User</h2>
+    <div class='mb-3 mt-3'>
+        <label for='firstName' class='form-label'>First Name:</label>
+        <input type='text' class='form-control' id='firstName' placeholder='Enter first name' name='firstName' />
+    </div>
+    <div class='mb-3 mt-3'>
+        <label for='lastName' class='form-label'>Last Name:</label>
+        <input type='text' class='form-control' id='lastName' placeholder='Enter last name' name='lastName' />
+    </div>
     <div class='mb-3 mt-3'>
         <label for='email' class='form-label'>Email:</label>
         <input type='email' class='form-control' id='email' placeholder='Enter email' name='email' />
     </div>
+    <div class='mb-3 mt-3'>
+        <label for='position' class='form-label'>Role:</label>
+        <select id='position' class='form-control' name='roleId'>
+            <option value='' disabled selected>Choose Role</option>
+            <option value='T'>Teacher</option>
+            <option value='S'>Student</option>
+        </select>
+    </div>
     <div class='mb-3'>
-        <label for='pwd' class='form-label'>Password:</label>
-        <input type='password' class='form-control' id='pwd' placeholder='Enter password' name='pswd' />
+        <label for='password' class='form-label'>Password:</label>
+        <input type='password' class='form-control' id='pwd' placeholder='Enter password' name='password' />
     </div>
     <div class='form-check mb-3'>
         <label class='form-check-label'>
